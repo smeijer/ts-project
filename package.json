@@ -39,9 +39,9 @@
   },
   "jest": {
     "testEnvironment": "jsdom",
-    "setupFiles": [
-      "./jest.setup.js"
-    ]
+    "globals": {
+      "__DEV__": false
+    }
   },
   "eslintConfig": {
     "extends": [

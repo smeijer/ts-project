@@ -12,5 +12,9 @@ export interface ThingProps extends HTMLAttributes<HTMLDivElement> {
  * A custom Thing component. Neat!
  */
 export function Thing({ children }: ThingProps) {
+  if (__DEV__) {
+    console.log(`I'll only be printed in dev envs`);
+  }
+
   return <div>{children || `the snozzberries taste like snozzberries`}</div>;
 }
