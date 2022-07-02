@@ -1,10 +1,10 @@
 {
-  "name": "botz",
+  "name": "ts-project",
   "version": "0.1.0",
   "license": "MIT",
   "author": "Stephan Meijer",
   "main": "dist/index.js",
-  "module": "dist/botz.esm.js",
+  "module": "dist/ts-project.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
@@ -66,11 +66,11 @@
   },
   "size-limit": [
     {
-      "path": "dist/botz.cjs.production.min.js",
+      "path": "dist/ts-project.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/botz.esm.js",
+      "path": "dist/ts-project.esm.js",
       "limit": "10 KB"
     }
   ],
