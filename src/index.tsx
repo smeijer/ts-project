@@ -1,4 +1,5 @@
 import React, { HTMLAttributes, ReactNode } from 'react';
+import css from './index.module.css';
 
 export interface ThingProps extends HTMLAttributes<HTMLDivElement> {
   /** custom content, defaults to 'the snozzberries taste like snozzberries' */
@@ -16,5 +17,9 @@ export function Thing({ children }: ThingProps) {
     console.log(`I'll only be printed in dev envs`);
   }
 
-  return <div>{children || `the snozzberries taste like snozzberries`}</div>;
+  return (
+    <div className={css.thing}>
+      {children || `the snozzberries taste like snozzberries`}
+    </div>
+  );
 }
