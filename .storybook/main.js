@@ -2,7 +2,7 @@
  * @type { import("@storybook/core-common").StorybookConfig }
  **/
 module.exports = {
-  stories: ['../src/**/*.stories.@(ts|tsx|js|jsx)'],
+  stories: ['../src'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
   // https://storybook.js.org/docs/react/configure/typescript#mainjs-configuration
   typescript: {
