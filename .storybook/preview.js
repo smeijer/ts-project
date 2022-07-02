@@ -1,4 +1,8 @@
 import { addons } from '@storybook/addons';
+import pkg from '../package.json';
+
+// reuse jest globals
+Object.assign(global, pkg.jest.globals);
 
 // https://storybook.js.org/docs/react/writing-stories/parameters#global-parameters
 export const parameters = {
