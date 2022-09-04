@@ -1,10 +1,11 @@
 import React, { HTMLAttributes, ReactNode } from 'react';
 import css from './index.module.css';
+import { sayHi } from '@ts-project/utils';
 
-export interface ThingProps extends HTMLAttributes<HTMLDivElement> {
-  /** custom content, defaults to 'the snozzberries taste like snozzberries' */
+export type ThingProps = HTMLAttributes<HTMLDivElement> & {
+  /** custom content */
   children?: ReactNode;
-}
+};
 
 // Please do not use types off of a default export module or else Storybook Docs will suffer.
 // see: https://github.com/storybookjs/storybook/issues/9556
@@ -17,9 +18,5 @@ export function Thing({ children }: ThingProps) {
     console.log(`I'll only be printed in dev envs`);
   }
 
-  return (
-    <div className={css.thing}>
-      {children || `the snozzberries taste like snozzberries`}
-    </div>
-  );
+  return <div className={css.thing}>{children || sayHi()}</div>;
 }

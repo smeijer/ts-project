@@ -1,8 +1,10 @@
+const glob = require('tiny-glob/sync');
+
 /**
  * @type { import("@storybook/core-common").StorybookConfig }
  **/
 module.exports = {
-  stories: ['../src'],
+  stories: glob('packages/*/src', { absolute: true }),
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
